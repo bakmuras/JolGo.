@@ -1,0 +1,94 @@
+/* ─────────────────────────────────────────
+   DESKTOP BROWSER — min-width: 769px
+───────────────────────────────────────── */
+@media (min-width: 769px) {
+
+  /* Таблица сравнения — обёртка не нужна,
+     таблица всегда полностью видна */
+  .cmp-table-wrap {
+    overflow-x: visible;
+    border: none;
+    margin-top: 0;
+  }
+
+  .cmp-table {
+    min-width: unset;
+    margin-top: var(--space-md);
+    border: none;
+  }
+
+  .cmp-table th,
+  .cmp-table td {
+    white-space: normal;
+  }
+
+  /* Nav — все ссылки видны */
+  .nav-links {
+    display: flex;
+  }
+
+  /* Курсор — только на десктопе */
+  #cur,
+  #cur-ring {
+    display: block;
+  }
+
+  body { cursor: none; }
+
+  /* Hero — горизонтальный row */
+  .hero-row {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  /* Сетки — восстановить оригинальные колонки */
+  .fog-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 120px;
+  }
+
+  .trio {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .loc-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .ranks-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 120px;
+  }
+
+  .rank-panel {
+    position: sticky;
+    top: 120px;
+    padding-top: var(--space-md);
+  }
+
+  .mkt-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 120px;
+  }
+
+  .mkt-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Форма — горизонтальный row */
+  .wl-row {
+    flex-direction: row;
+  }
+
+  .wl-row .wl-input:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /* Скролл-хинт */
+  .hero-scroll-hint {
+    display: flex;
+  }
+
+}
